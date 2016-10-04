@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 # list of cat images
-images = [
+cats_images = [
     "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26388-1381844103-11.gif",
     "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr01/15/9/anigif_enhanced-buzz-31540-1381844535-8.gif",
     "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26390-1381844163-18.gif",
@@ -19,9 +19,36 @@ images = [
     "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/15/10/anigif_enhanced-buzz-11980-1381846269-1.gif"
 ]
 
+# list of dog images
+dogs_images = [
+    "http://www.doggifpage.com/gifs/150.gif",
+    "http://www.doggifpage.com/gifs/105.gif",
+    "http://www.doggifpage.com/gifs/148.gif",
+    "http://www.doggifpage.com/gifs/146.gif",
+    "http://www.doggifpage.com/gifs/144.gif",
+    "http://www.doggifpage.com/gifs/143.gif",
+    "http://www.doggifpage.com/gifs/139.gif",
+    "http://www.doggifpage.com/gifs/137.gif",
+    "http://www.doggifpage.com/gifs/136.gif",
+    "http://www.doggifpage.com/gifs/135.gif",
+    "http://www.doggifpage.com/gifs/128.gif",
+    "http://www.doggifpage.com/gifs/120.gif"
+]
+
 @app.route('/')
 def index():
-    url = random.choice(images)
+    combined_list = cats_images + dogs_images
+    url = random.choice(combined_list)
+    return render_template('index.html', url=url)
+
+@app.route('/cats')
+def cats_index():
+    url = random.choice(cats_images)
+    return render_template('index.html', url=url)
+
+@app.route('/dogs')
+def dogs_index():
+    url = random.choice(dogs_images)
     return render_template('index.html', url=url)
 
 if __name__ == "__main__":
