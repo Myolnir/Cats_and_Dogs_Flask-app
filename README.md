@@ -1,4 +1,4 @@
-# flask-app
+# Cats_and_Dogs_Flask-app
 
 Demo flask app that exposes random images from dogs and cats:
 
