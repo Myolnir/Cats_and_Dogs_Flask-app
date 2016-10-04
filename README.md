@@ -9,3 +9,12 @@ It exposes three endpoints:
 "/dogs" -> shows random gifs from dogs 
 
 "/cats" -> shows random gifs from cats
+
+If you can download this project by docker image you can do this:
+
+```
+docker pull myolnir/flask-app
+docker run -p 8888:5000 --name flask-app myolnir/flask-app
+```
+
+Enjoy!
