@@ -13,7 +13,7 @@ It exposes three endpoints:
 If you can download this project by docker image you can do this:
 
 ```
-docker pull myolnir/flask-app
+docker pull myolnir/cats_and_dogs_flask-app
 docker run -p 8888:5000 --name flask-app myolnir/flask-app
 ```
 
