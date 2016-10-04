@@ -1,5 +1,9 @@
 # flask-app
 
-Base app for python flask framework and docker image
+Demo flask app that exposes random images from dogs and cats:
 
-Currently it only shows a random cats image. Who doesn't like cats?
+It exposes three endpoints:
+
+"/" -> shows random gifs from dogs and cats
+"/dogs" -> shows random gifs from dogs
+"/cats" -> shows random gifs from cats
